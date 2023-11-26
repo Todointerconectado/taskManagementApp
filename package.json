@@ -5,7 +5,7 @@
   "homepage": "https://Todointerconectado.github.io/taskManagementApp",
   "type": "module",
   "scripts": {
-    "predeploy": "npm rum build",
+    "predeploy": "npm rum dev && echo 'Todointerconectado.github.io/taskManagementApp' > ./dist/CNAME",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
