@@ -1,3 +1,9 @@
+import PropTypes from 'prop-types';
+
+TasksList.propTypes = {
+    tasks: PropTypes.array.isRequired,
+};
+
 export default function TasksList({tasks}) {
 
     const handleDelete = (id) => {console.log('se borrara!', id)};

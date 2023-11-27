@@ -1,3 +1,9 @@
+import PropTypes from 'prop-types';
+
+Input.propTypes = {
+    onAddTask: PropTypes.func.isRequired,
+};
+
 export default function Input({ onAddTask }) {
 
     const handleSubmit = (e) => {
@@ -20,3 +26,4 @@ export default function Input({ onAddTask }) {
         </form>
     );
 }
+
