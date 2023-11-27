@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
-function App() {
-  const [count, setCount] = useState(0)
+// Import de components
+import Input from './conponents/Input';
+import TasksList from './conponents/TaskList';
+
+export default function App() {
+  // Hooks: Variables globales.
+  const [tasks, setTasks] = useState([]);
+
+  // Función para crear nuevas tareas con la descripción del input.
+  const handleAddTask = (description) => {
+    
+    const newTask = {
+      id: uuidv4(),
+      description: description,
+      isCompleted: false,
+    }
+    setTasks([...tasks, newTask]);
+  }
+  // borrar tarea con el ID
+  const handleDeleteTask = (id) => {
+    // borrar tarea que coincida con el ID.
+  };
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Apps Gestión de Tareas</h1>
+      <Input onAddTask={(description) => handleAddTask(description)} />
+      <TasksList tasks={tasks}/>
     </>
-  )
+  );
 }
-
-export default App
