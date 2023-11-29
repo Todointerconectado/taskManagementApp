@@ -8,19 +8,28 @@ import TasksList from './conponents/TaskList.jsx';
 import getCurrentTime from './conponents/getCurrentTime';
 import Search from './conponents/SearchBar.jsx';
 
+// Trae las tareas almacenadas del localStorage y las parsea como un objeto.
+const getTasksFromStorage = () => {
+  // Obtiene las tareas almacenadas en el localStorage.
+  const storedTasks = window.localStorage.getItem('tasks');
+  // Intenta analizar las tareas almacenadas como un objeto JSON.
+  const objetStoredTasks =  JSON.parse(storedTasks);
+// Devuelve las tareas como un objeto; de lo contrario, devuelve un array vacío.
+  return objetStoredTasks ? objetStoredTasks : [];
+}
+
 export default function App() {
   // Hooks: Variables globales. Estado
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(getTasksFromStorage());
   // Estado derivado de tasks.
-  const [filteredTasks, setFilteredTasks] = useState([]);
+  const [filteredTasks, setFilteredTasks] = useState(tasks);
   // Variable de estado para la busqueda.
   // eslint-disable-next-line no-unused-vars
   const [searchQuery, setSearchQuery] = useState("");
 
   // Cuando se monta el componente Guardar las tasks en localStorage.
-  useEffect( () => {
-    if(tasks.length) 
-      window.localStorage.setItem("tasks", JSON.stringify(tasks));
+  useEffect( () => { 
+    window.localStorage.setItem("tasks", JSON.stringify(tasks));
   },[tasks]);
 
   // Función para crear nuevas tareas con la description del input.
