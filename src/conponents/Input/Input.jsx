@@ -22,8 +22,19 @@ export default function Input({ onAddTask }) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="description"> * Escribir tarea nueva: </label>
-            <input type="text" name="description" id="description" placeholder="Ej: Ir al GIM a las 7pm..." title="input" aria-label="Escribir tarea nueva" required/>
+            <label htmlFor="description"> 
+                <span>*</span> 
+                Escribir nueva tarea:
+            </label>
+            <input 
+                type="text"  
+                name="description" 
+                id="description" 
+                placeholder="Ej: Ir al GIM..." 
+                title="input" 
+                aria-label="Escribir tarea nueva" 
+                required
+            />
             <button className="submit" type="submit">
                 <FaPlus className='icon'/>
             </button>

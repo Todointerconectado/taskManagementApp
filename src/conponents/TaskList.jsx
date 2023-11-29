@@ -7,13 +7,13 @@ import { CiEdit } from "react-icons/ci";
 import PropTypes from 'prop-types';
 
 TasksList.propTypes = {
-    tasks: PropTypes.array.isRequired,
+    onTasks: PropTypes.array.isRequired,
     onDeleteTask: PropTypes.func.isRequired,
     onEditTask: PropTypes.func.isRequired,
     onChangeStatus: PropTypes.func.isRequired,
 };
 
-export default function TasksList({tasks, onDeleteTask, onEditTask, onChangeStatus}) {
+export default function TasksList({onTasks, onDeleteTask, onEditTask, onChangeStatus}) {
 
     return (
         <table>
@@ -23,12 +23,12 @@ export default function TasksList({tasks, onDeleteTask, onEditTask, onChangeStat
                     <th>N⁰</th>
                     <th>Hora</th>
                     <th>Estado</th>
-                    <th>Descripción</th>
+                    <th>description</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                {tasks.map((task, indice) => (
+                {onTasks.map((task, indice) => (
                     <tr key={task.id}>
                         <td>{indice+1}</td>
                         <td>{task.hours}</td>
