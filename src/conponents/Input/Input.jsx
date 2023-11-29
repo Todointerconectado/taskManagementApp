@@ -1,3 +1,5 @@
+import './Input.css';
+import { FaPlus } from "react-icons/fa";
 import PropTypes from 'prop-types';
 
 Input.propTypes = {
@@ -22,7 +24,9 @@ export default function Input({ onAddTask }) {
         <form onSubmit={handleSubmit}>
             <label htmlFor="description"> * Escribir tarea nueva: </label>
             <input type="text" name="description" id="description" placeholder="Ej: Ir al GIM a las 7pm..." title="input" aria-label="Escribir tarea nueva" required/>
-            <input type="submit" value="Crear" />
+            <button className="submit" type="submit">
+                <FaPlus className='icon'/>
+            </button>
         </form>
     );
 }
