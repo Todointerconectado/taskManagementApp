@@ -6,7 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicons -->
-  <link rel="icon" type="image/svg+xml" href="/taskManagementApp/vite.svg">
+  <link rel="shortcut icon" href="/taskManagementApp/assets/favicons-SVI7-XaV.png" type="image/x-icon">
+
+  <!-- Icono para dispositivos Apple -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/taskManagementApp/assets/apple-touch-icon-GQ5gfWbV.png">
+
+  <!-- Iconos para navegadores -->
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABDZJREFUWEedV1tvG0UYPTNer23wLbFJJIRIoU3V9KJK/Q2txBP1C3kDQSmloinpC4+89l+0KE1vKUgJUiUkJB4QEsVSxBNNiIIQTbk1ctrEG2/sXe8M2vXant2d8dqsZK21+803Z75zvssSDHERADzWbjirsBt3Vefy1v8/J0EfAYdDwZYYdYGEAcUDlFvInnbO3o9ABMYAVwQgXKSlY6uEOwB3BIDKdmiGCAF4vGJEogbyJG6sIkY8ev8A6mN7GN1d+UAK+rjimVfLKAg66smjoGekiF54WW1p5WzKts84FEXOeY5ymqUMOYu3X3yXoZdnZ2edWPkLyRdPgWCxu2+fS2z+dhdAGZoG98c1Dax5APxUxZ5tH5765MLv7rEIuKJ+BIkakIZCifAjtWewrwkhb3slw+fRDeHB8x3Y95dgJdPH3rz24cZoEYhQE3wg8lhvsBWH8/N96jgoKMwXz2HfvQ87lfEBRHJVIDuoLwVYufTqBlt+ZD6p5NoJFOoEup7E5OQETDcCd+6hnc3NvHH1g1/lThUi7MswPnAugJ8bf1Yc28ZrBykwzvByNo+UY6O5eAfJcmHm1Y8lABSpNKASBvnvpkp9ny+bzKpoINCp5pdTAnOnhtatRbDx7PFDVy6twy9IyhT2X8QCCMfEaLDlR8ZWpeBoKDRcCnSUyiUc1GqwvlhAq1Q6Mf3phTVZLGUEKACo61m9wZare39Ukm1gwtS9ppDP5aFZTdg3FtCcLJ6cnrv0WEWrrF8EwQoWsvC5Edh1WhUdFBma9PKcEAJz+xmsm7fQmpw4OT33/uMQgUpxjUBBB45hsJWquXX+pTZFvs6RSadRLpVhbm+jvXAbrfLYqSPzF3+JlfPIGvAXGEb729X9v86lGcWYScEZR6FQADX2YS3ehlXqAJCKT/LQrZfBeSum89QNe4PTxFF3HvCU7t44h7G1Bbb0FZpjxVNHrsVHQCxuobYg7+XP/t29CHBLz2RuEEI1Qn323MGEE9Q3N6E9/AaN0rinAW+DmMN44GOqcI/KtfWnTwilr1NKQCj1AkfdOyXQkzpaG+vI/FiFncudmFKkoSo1pXrp9TK/oPzw/eq8w+k8oSRLGH+FahqolvBAFAp5OKtVlJ/+jXoudfzolY/We2noh8LrjGJ78AMo3KIznUrJD9+9vEMYH+cJDU4yAZpOoQyK6alDqGXSM8dCvWAQE/007P5TjXM9LwRrn1+fSzC81WasCM6KjLNSSk8Vi2Pje/846cOnP3uvEQXvH7/7wt8nUgeG0E3Id2fFgy8fJN5xZzxvGoqpZoLsY0ux322G+TQaqa13jQNZ0NGLaqwOKSj4YaAQsgS3mJ+kU4aUdMnlINRQqcFoJAZF2HOocBIn5wig0FgmrhfO0ZNEYIpVbiYW0SG/gCJB6zsPURDadahoyoZPr8hKvxfDfP8HnmS5Nmd+gwgAAAAASUVORK5CYII=">
+  <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAfpJREFUOE9dU79PFEEU/t4tnscFL1zIQRTpULfyn7AgsSVgZQPFBQtNDDTWVP4dFjTGxkJjYvQKBCRCbDYauZOcCZElcsfxY4/b3SFvZnZm1m12Zt6b733vfd8Q+CMAQq70hn8CJAiChIzlUnjH5yB5rn/qQMhMtbaonChkDXmBIzqs9nn4jIohZMLMhBjfBdSQWWEZIoHOq7dVQef3PUE34jQtjj1+9IabMQx0ZW7G0LP8gN5B950YDGbo2hCi3R1EQXNs6vnivwyAc7lTPQOnWw6AsN85DdLo0q8UhxGtf0Ev+Fnzl+tHbr98mVuyAjgUfndOgyS69MtURLq5ATrYq92qM4DzSf558WR1luh7GAbxSeTXiiMofN3Gebs9fvfZYigFMrqSZpBNQkUl6l63F6QXsT96fRjRx8+Ims2J6ZWlQ1tfC2go5FQH2t2zP3E/nixhCMmnBi72WxPTK08O7dBV88pK//nmV/PvWqlUmi94BfIKhP77D+gfH4/feboQZrnaoHYG7nQbjW+zg1ZrAZ2Th95IGbfDIyRVr3avvqSHKCflOtP1pRL4x4vVyQT0IEniaqUyWt7aufly7vV8YpyuJdRCZI7IaQpSvnVkVhO29PVjUgZX8ihfqtdobhqzsGxCOVA7iLIpmtecdScr2TcoVxLIkuYKVyG33x5q/W8jAAAAAElFTkSuQmCC">
+
+  <!-- Archivo de manifiesto para PWA -->
+  <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
 
   <title>Apps Gestión de Tareas</title>
 
@@ -27,15 +37,19 @@
   <meta name="robots" content="index, follow">
   <meta name="category" content="tecnologias">
   <meta itemprop="name" content="TodoInterconectado">
-  <meta itemprop="image" content="https://repository-images.githubusercontent.com/721948096/b4c20a0f-9e22-4354-8ac0-d22665ef949e">
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+  <meta itemprop="image" content="https://raw.githubusercontent.com/Todointerconectado/taskManagementApp/main/src/assets/miniatura.png">
+
+  <!-- La siguiente metaetiqueta se utiliza para verificar la propiedad del sitio en Google Search Console. -->
+  <meta name="google-site-verification" content="snzppUO__m40g8l3E_9h0yEDcbLH5un6t3504S2m1OI" />
 
   <!-- Open Graph protocol for Facebook SEO -->
   <meta property="og:title" content="Apps Gestión de Tareas">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <meta property="og:url" content="https://todointerconectado.github.io/taskManagementApp/">
-  <meta property="og:image" content="https://repository-images.githubusercontent.com/721948096/b4c20a0f-9e22-4354-8ac0-d22665ef949e">
+  <meta property="og:image" content="https://raw.githubusercontent.com/Todointerconectado/taskManagementApp/main/src/assets/miniatura.png">
+  <meta property="og:image:width" content="640">
+  <meta property="og:image:height" content="427">
   <meta property="og:image:alt" content="Banner de portada de página">
   <meta property="og:image:type" content="image/png">
   <meta property="og:description" content="Aplicación para gestionar todas tus Tareas.">
@@ -48,9 +62,12 @@
   <meta name="twitter:title" content="Apps Gestión de Tareas">
   <meta name="twitter:description" content="Aplicación para gestionar todas tus tareas.">
   <meta property="twitter:url" content="https://todointerconectado.github.io/taskManagementApp/">
-  <meta name="twitter:image" content="https://repository-images.githubusercontent.com/721948096/b4c20a0f-9e22-4354-8ac0-d22665ef949e">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/Todointerconectado/taskManagementApp/main/src/assets/miniatura.png">
   <meta property="twitter:image:alt" content="Banner de portada de página">
   <meta property="twitter:image:type" content="image/png">
+
+  <!-- Prefetch DNS para acelerar la carga de fuentes desde Google Fonts -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
 
   <!-- Estilos con Milligram y Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
